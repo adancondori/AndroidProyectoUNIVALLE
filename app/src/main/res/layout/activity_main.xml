@@ -5,15 +5,80 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simulador Cajero" />
+
+            <Spinner
+                android:id="@+id/spinnerCuentas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutMonto"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/spinnerCuentas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMonto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monto"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnDepositar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Depositar" />
+
+            <Button
+                android:id="@+id/btnRetirar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retirar" />
+
+            <Button
+                android:id="@+id/btnVerSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Saldo" />
+
+            <Button
+                android:id="@+id/btnAgregarCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar Cuenta" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="25dp"
+                android:text="TextView" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
