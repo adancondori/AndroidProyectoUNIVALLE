@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProyectoUNIVALLE"
         tools:targetApi="31">
+        <activity
+            android:name=".PantallaActivity"
+            android:exported="true" >
+
+        </activity>
 
         <activity
             android:name=".SplashActivity"
@@ -19,24 +24,21 @@
             android:theme="@style/Theme.AndroidProyectoUNIVALLE">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MenuActivity"
-            android:exported="false" />
-
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AndroidProyectoUNIVALLE">
-
-        </activity>
+            android:theme="@style/Theme.AndroidProyectoUNIVALLE"></activity>
     </application>
 
 </manifest>
