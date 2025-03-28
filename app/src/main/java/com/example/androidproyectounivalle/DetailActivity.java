@@ -27,7 +27,7 @@ public class DetailActivity extends AppCompatActivity {
         titleText.setText(title);
 
         // Obtener la lista de items si existe
-        ArrayList<Item> items = (ArrayList<Item>) getIntent().getSerializableExtra("ITEMS_LIST");
+            ArrayList<Item> items = (ArrayList<Item>) getIntent().getSerializableExtra("ITEMS_LIST");
         if (items != null) {
             LinearLayout container = findViewById(R.id.container);
             for (Item item : items) {

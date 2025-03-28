@@ -42,6 +42,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             items.add(new Item("Ejemplo 1", "Descripción del ejemplo 1"));
             items.add(new Item("Ejemplo 2", "Descripción del ejemplo 2"));
             items.add(new Item("Ejemplo 3", "Descripción del ejemplo 3"));
+            items.add(new Item("Ejemplo RTEst", "Descripción del asdfsadfasdfsad 3"));
 
             intent.putExtra("SCREEN_TITLE", title);
             intent.putExtra("ITEMS_LIST", items);
@@ -57,8 +58,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             title = "PEdro Perez";
             intent = new Intent(this, PantallaActivity.class);
         } else if (id == R.id.card5) {
-            title = "Opción 5";
-            intent = new Intent(this, DetailActivity.class);
+            intent = new Intent(this, ImageGalleryActivity.class);
+            startActivity(intent);
+            return;
         } else {
             title = "Opción 6";
             intent = new Intent(this, DetailActivity.class);
