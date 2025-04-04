@@ -5,27 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
-
-
+    tools:context=".activities.PantallaC">
     <TextView
-        android:id="@+id/tvTitleA"
+        android:id="@+id/tvTitleC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Soy Pantalla A"
+        android:text="Soy Pantalla C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnPantallaA"
+        android:id="@+id/btnPantallaC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleA" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleC" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
