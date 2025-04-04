@@ -14,14 +14,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.androidproyectounivalle.R;
 
-public class PantallaC extends AppCompatActivity {
-    public Button btnPantallaC;
-    public TextView tvTitleC;
+public class PantallaD extends AppCompatActivity {
+    public Button btnPantallaD;
+    public TextView tvTitleD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_pantalla_c);
+        setContentView(R.layout.activity_pantalla_d);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -30,26 +30,27 @@ public class PantallaC extends AppCompatActivity {
         init();
         recibirParametro();
     }
+
     public void recibirParametro(){
-        String value = getIntent().getStringExtra("KEY_PANTALLA_B");
-        tvTitleC.setText(value);
+        String value = getIntent().getStringExtra("KEY_PANTALLA_C");
+        tvTitleD.setText(value);
     }
 
     public void init(){
-        btnPantallaC = findViewById(R.id.btnPantallaC);
-        tvTitleC = findViewById(R.id.tvTitleC);
-        btnPantallaC.setOnClickListener(new View.OnClickListener() {
+        btnPantallaD = findViewById(R.id.btnPantallaD);
+        tvTitleD = findViewById(R.id.tvTitleD);
+        btnPantallaD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goActivityC();
+//                goActivityB();
             }
         });
     }
 
-    public void goActivityC() {
-        Intent intent = new Intent(PantallaC.this, PantallaD.class);
-        intent.putExtra("KEY_PANTALLA_C", "Vengo de la pantalla C");
-        startActivity(intent);
-        finish();
+    public void goActivityB() {
+//        Intent intent = new Intent(PantallaC.this, PantallaD.class);
+//        intent.putExtra("KEY_PANTALLA_C", "Vengo de la pantalla C");
+//        startActivity(intent);
+//        finish();
     }
 }

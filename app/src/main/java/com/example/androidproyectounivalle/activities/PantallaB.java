@@ -29,8 +29,13 @@ public class PantallaB extends AppCompatActivity {
             return insets;
         });
         init();
+        recibirParametro();
     }
 
+    public void recibirParametro(){
+        String value = getIntent().getStringExtra("KEY_PANTALLA_A");
+        tvTitleB.setText(value);
+    }
 
     public void init(){
         btnPantallaB = findViewById(R.id.btnPantallaB);
@@ -38,13 +43,15 @@ public class PantallaB extends AppCompatActivity {
         btnPantallaB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goActivityB();
+                goActivityC();
             }
         });
     }
 
-    public void goActivityB() {
+    public void goActivityC() {
         Intent intent = new Intent(PantallaB.this, PantallaC.class);
+        intent.putExtra("KEY_PANTALLA_B", "Vengo de la pantalla B");
         startActivity(intent);
+        finish();
     }
 }
