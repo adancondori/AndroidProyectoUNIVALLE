@@ -50,6 +50,5 @@ public class PantallaC extends AppCompatActivity {
         Intent intent = new Intent(PantallaC.this, PantallaD.class);
         intent.putExtra("KEY_PANTALLA_C", "Vengo de la pantalla C");
         startActivity(intent);
-        finish();
     }
 }
