@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void goActivity() {
         Intent intent = new Intent(MainActivity.this, PantallaB.class);
+        intent.putExtra("KEY-A", "Vengo de la pantalla A");
         startActivity(intent);
+
     }
 }

@@ -28,6 +28,7 @@ public class PantallaD extends AppCompatActivity {
             return insets;
         });
         init();
+        getParametro();
     }
 
 
@@ -46,5 +47,8 @@ public class PantallaD extends AppCompatActivity {
 //        Intent intent = new Intent(PantallaD.this, PantallaD.class);
 //        startActivity(intent);
     }
-
+    public void getParametro(){
+        String value = getIntent().getStringExtra("KEY-C");
+        tvTitleD.setText(value);
+    }
 }

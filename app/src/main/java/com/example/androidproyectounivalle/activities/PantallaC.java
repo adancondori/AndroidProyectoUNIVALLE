@@ -28,6 +28,7 @@ public class PantallaC extends AppCompatActivity {
             return insets;
         });
         init();
+        getParametro();
     }
 
     public void init(){
@@ -43,8 +44,12 @@ public class PantallaC extends AppCompatActivity {
 
     public void goActivity() {
         Intent intent = new Intent(PantallaC.this, PantallaD.class);
+        intent.putExtra("KEY-C", "Vengo de la pantalla C");
         startActivity(intent);
         finish();
     }
-
+    public void getParametro(){
+        String value = getIntent().getStringExtra("KEY-B");
+        tvTitleC.setText(value);
+    }
 }

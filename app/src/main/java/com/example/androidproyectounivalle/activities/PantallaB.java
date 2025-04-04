@@ -30,6 +30,7 @@ public class PantallaB extends AppCompatActivity {
             return insets;
         });
         init();
+        getParametro();
     }
 
 
@@ -46,7 +47,13 @@ public class PantallaB extends AppCompatActivity {
 
     public void goActivity() {
         Intent intent = new Intent(PantallaB.this, PantallaC.class);
+        intent.putExtra("KEY-B", "Vengo de la pantalla B");
         startActivity(intent);
+        finish();
     }
 
+    public void getParametro(){
+        String value = getIntent().getStringExtra("KEY-A");
+        tvTitleB.setText(value);
+    }
 }
