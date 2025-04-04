@@ -33,8 +33,8 @@ public class PantallaB extends AppCompatActivity {
 
 
     public void init(){
-        btnPantallaB = findViewById(R.id.btnPantallaA);
-        tvTitleB = findViewById(R.id.tvTitleA);
+        btnPantallaB = findViewById(R.id.btnPantallaB);
+        tvTitleB = findViewById(R.id.tvTitleB);
         btnPantallaB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
