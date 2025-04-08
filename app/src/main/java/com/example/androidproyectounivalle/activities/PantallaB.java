@@ -41,6 +41,7 @@ public class PantallaB extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goActivity();
+
             }
         });
     }
@@ -55,5 +56,22 @@ public class PantallaB extends AppCompatActivity {
     public void getParametro(){
         String value = getIntent().getStringExtra("KEY-A");
         tvTitleB.setText(value);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("RESULT_BACK", "Mensaje enviado desde PantallaB al presionar Atrás");
+
+        setResult(RESULT_OK, resultIntent);
+
+        super.onBackPressed();
+    }
+
+    private void enviarResultadoYVolver() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("RESULT_BACK", "Mensaje enviado desde el botón de PantallaB");
+        setResult(RESULT_OK, resultIntent);
+        finish();
     }
 }

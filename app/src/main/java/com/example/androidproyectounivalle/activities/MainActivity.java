@@ -17,6 +17,7 @@ import com.example.androidproyectounivalle.R;
 public class MainActivity extends AppCompatActivity {
     public Button btnPantallaA;
     public TextView tvTitleA;
+    private static final int REQUEST_CODE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
     public void goActivity() {
         Intent intent = new Intent(MainActivity.this, PantallaB.class);
         intent.putExtra("KEY-A", "Vengo de la pantalla A");
-        startActivity(intent);
+//        startActivity(intent);
+        startActivityForResult(intent, REQUEST_CODE);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            String result = data.getStringExtra("RESULT_BACK");
+            tvTitleA.setText(result);
+        }
     }
 }
