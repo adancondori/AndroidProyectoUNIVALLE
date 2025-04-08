@@ -29,6 +29,37 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         init();
+        System.out.println("Estoy en el onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("Estoy en el onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("Estoy en el onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("Estoy en el onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("Estoy en el onStop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        System.out.println("Estoy en el onRestart");
     }
 
     public void init(){
