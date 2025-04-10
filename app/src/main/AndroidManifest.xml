@@ -21,6 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.EjemploSimpleActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.EjemploIntermedioActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.EjemploAvanzadoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
