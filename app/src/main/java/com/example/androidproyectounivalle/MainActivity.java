@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.androidproyectounivalle.activities.EjemploAvanzadoActivity;
 import com.example.androidproyectounivalle.activities.EjemploIntermedioActivity;
 import com.example.androidproyectounivalle.activities.EjemploSimpleActivity;
+import com.example.androidproyectounivalle.activities.PokemonApiActivity;
 import com.example.androidproyectounivalle.adapters.MenuAdapter;
 import com.example.androidproyectounivalle.models.MenuItem;
 
@@ -67,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("Ejemplo Simple", android.R.drawable.ic_menu_view));
         menuItems.add(new MenuItem("Ejemplo Intermedio", android.R.drawable.ic_menu_sort_by_size));
         menuItems.add(new MenuItem("Ejemplo Avanzado", android.R.drawable.ic_menu_slideshow));
+        menuItems.add(new MenuItem("Pokémon API", android.R.drawable.ic_menu_compass));
 
         // Reservamos espacio para opciones futuras
-        // menuItems.add(new MenuItem("Opción Futura 1", android.R.drawable.ic_menu_compass));
-        // menuItems.add(new MenuItem("Opción Futura 2", android.R.drawable.ic_menu_search));
+        // menuItems.add(new MenuItem("Opción Futura 1", android.R.drawable.ic_menu_search));
     }
 
     private void handleMenuSelection(int position) {
@@ -85,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2: // Ejemplo Avanzado
                 intent = new Intent(this, EjemploAvanzadoActivity.class);
+                break;
+            case 3: // Pokémon API
+                intent = new Intent(this, PokemonApiActivity.class);
                 break;
             default:
                 Toast.makeText(this, "Opción no implementada aún", Toast.LENGTH_SHORT).show();

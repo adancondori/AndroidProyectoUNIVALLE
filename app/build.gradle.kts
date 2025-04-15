@@ -40,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Volley para realizar peticiones HTTP
+    implementation(libs.volley)
+
+    // Glide para cargar imágenes
+    implementation(libs.glide)
 }
