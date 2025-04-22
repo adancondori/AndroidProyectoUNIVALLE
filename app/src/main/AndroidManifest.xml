@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permiso para acceder a internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,6 +15,9 @@
         android:theme="@style/Theme.AndroidProyectoUNIVALLE"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ExamplePostActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,19 +26,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activities.EjemploSimpleActivity"
             android:exported="false" />
-
         <activity
             android:name=".activities.EjemploIntermedioActivity"
             android:exported="false" />
-
         <activity
             android:name=".activities.EjemploAvanzadoActivity"
             android:exported="false" />
-
         <activity
             android:name=".activities.PokemonApiActivity"
             android:exported="false" />
