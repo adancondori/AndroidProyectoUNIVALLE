@@ -17,6 +17,7 @@ import com.example.androidproyectounivalle.activities.EjemploAvanzadoActivity;
 import com.example.androidproyectounivalle.activities.EjemploIntermedioActivity;
 import com.example.androidproyectounivalle.activities.EjemploSimpleActivity;
 import com.example.androidproyectounivalle.activities.ExamplePostActivity;
+import com.example.androidproyectounivalle.activities.ItemCrudActivity;
 import com.example.androidproyectounivalle.activities.PokemonApiActivity;
 import com.example.androidproyectounivalle.adapters.MenuAdapter;
 import com.example.androidproyectounivalle.models.MenuItem;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("Ejemplo Avanzado", android.R.drawable.ic_menu_slideshow));
         menuItems.add(new MenuItem("Pokémon API", android.R.drawable.ic_menu_compass));
         menuItems.add(new MenuItem("POST API", android.R.drawable.ic_menu_compass));
+        menuItems.add(new MenuItem("CRUD Items", android.R.drawable.ic_menu_edit));
 
         // Reservamos espacio para opciones futuras
         // menuItems.add(new MenuItem("Opción Futura 1", android.R.drawable.ic_menu_search));
@@ -94,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 4: // Post API
                 intent = new Intent(this, ExamplePostActivity.class);
+                break;
+            case 5: // CRUD Items
+                intent = new Intent(this, ItemCrudActivity.class);
                 break;
             default:
                 Toast.makeText(this, "Opción no implementada aún", Toast.LENGTH_SHORT).show();

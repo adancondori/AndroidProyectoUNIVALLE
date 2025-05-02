@@ -38,6 +38,9 @@
         <activity
             android:name=".activities.PokemonApiActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.ItemCrudActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
