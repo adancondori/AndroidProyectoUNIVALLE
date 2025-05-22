@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.androidproyectounivalle.activities.DrawingActivity;
 import com.example.androidproyectounivalle.activities.EjemploAvanzadoActivity;
 import com.example.androidproyectounivalle.activities.EjemploIntermedioActivity;
 import com.example.androidproyectounivalle.activities.EjemploSimpleActivity;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("Pokémon API", android.R.drawable.ic_menu_compass));
         menuItems.add(new MenuItem("POST API", android.R.drawable.ic_menu_compass));
         menuItems.add(new MenuItem("CRUD Items", android.R.drawable.ic_menu_edit));
+        menuItems.add(new MenuItem("Paint Canvas", android.R.drawable.ic_menu_compass));
 
         // Reservamos espacio para opciones futuras
         // menuItems.add(new MenuItem("Opción Futura 1", android.R.drawable.ic_menu_search));
@@ -99,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 5: // CRUD Items
                 intent = new Intent(this, ItemCrudActivity.class);
+                break;
+            case 6: // Paint Canvas
+                intent = new Intent(this, DrawingActivity.class);
                 break;
             default:
                 Toast.makeText(this, "Opción no implementada aún", Toast.LENGTH_SHORT).show();

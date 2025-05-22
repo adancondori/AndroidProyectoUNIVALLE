@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AndroidProyectoUNIVALLE"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DrawingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ExamplePostActivity"
             android:exported="false" />
         <activity
